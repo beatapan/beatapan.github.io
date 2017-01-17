@@ -71,7 +71,7 @@ color: #fff;background: #ffd670;width: 100%;display: none;}
 #m-portfolio .text h4{font-size: 16px; line-height: 30px;height: 30px;color: #fff1ce;font-weight: normal;}
 #m-portfolio .text h2{font-size: 23px; line-height: 38px;height: 38px;color: #fff;margin-bottom: 32px;}
 #m-portfolio .text ul{margin-top: 15px;}
-#m-portfolio .text ul li{height: 30px; line-height: 30px;font-size: 15px; color: #ffffff;padding-left: 58px;
+#m-portfolio .text ul li{line-height: 30px;font-size: 15px; color: #ffffff;padding-left: 58px;
 background: url(../img/li_bg.png) no-repeat 36px center; }
 #m-portfolio .text ul li a{color: #fff;}
 #m-portfolio .text p{padding: 11px 0 77px 0; line-height: 30px;color: #fff;font-size: 15px;border-bottom: 1px solid #ffe39c;}
