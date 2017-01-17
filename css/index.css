@@ -30,7 +30,7 @@ body { font-size:12px; font-family:"Microsoft yahei"; }
 	border:2px solid #fff; border-radius: 50%;margin-bottom: 46px;}
 .my_info h3{color: #fff; line-height: 40px; font-size: 35px;font-weight: normal;text-align: center;margin-bottom: 34px;}
 .my_info h1{color: #fff; line-height: 64px; font-size: 66px;font-weight: normal;text-align: center;margin-bottom: 24px}
-.my_info p{font-size: 22px;color: #fff;font-weight: normal;text-align: center;margin-bottom: 42px;}
+.my_info p{font-size: 22px;color: #fff;font-weight: normal;text-align: center;}
 .my_info p strong{color: #ffd670;}
 .my_info p .age,.my_info p .country{margin-right: 80px;}
 .sns{width: 374px;margin:0 auto;margin-bottom: 160px;}
@@ -43,7 +43,7 @@ body { font-size:12px; font-family:"Microsoft yahei"; }
 #m-about{background: #524664;}
 #m-about .photo{border:2px solid #ffd670;margin-bottom: 15px;}
 #m-about .my_info span{display: inline-block;width: 92px; height: 3px; background: #736588;position: relative;left: 341px;}
-.my_info p{line-height: 50px;height: 50px;margin-bottom: 47px;color: #c2b8cd;}
+.my_info p{line-height: 50px;height: 50px;color: #c2b8cd;}
 #m-about .my_info h3{margin-bottom: 13px;}
 .about_info{padding: 0 10%;}
 .about_info .text{width: 23%;float: left;}
@@ -72,7 +72,7 @@ color: #fff;background: #ffd670;width: 100%;display: none;}
 #m-portfolio .text h2{font-size: 23px; line-height: 38px;height: 38px;color: #fff;margin-bottom: 32px;}
 #m-portfolio .text ul{margin-top: 15px;}
 #m-portfolio .text ul li{line-height: 30px;font-size: 15px; color: #ffffff;padding-left: 58px;
-background: url(../img/li_bg.png) no-repeat 36px center; }
+background: url(../img/li_bg.png) no-repeat 36px center; text-overflow:ellipsis; white-space:nowrap;overflow: hidden;}
 #m-portfolio .text ul li a{color: #fff;}
 #m-portfolio .text p{padding: 11px 0 77px 0; line-height: 30px;color: #fff;font-size: 15px;border-bottom: 1px solid #ffe39c;}
 #m-portfolio .scroll{float: left;}
