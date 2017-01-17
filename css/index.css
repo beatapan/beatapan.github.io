@@ -111,6 +111,7 @@ transform:rotate(-45deg);
 .diamond .con  a{display: block;width: 25%; height: 25%;background: #bc492b;
 	font-size: 24px;font-weight: bold;text-align: center;border-radius: 50%;
 color: #fff;margin: 10% auto 0;}
+.diamond .con  a span{position: absolute;top: 50%;margin-top: -1%;}
 
 .diamond .con a:hover {
 	background-color: #f8e3ae;
