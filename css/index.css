@@ -46,14 +46,14 @@ body { font-size:12px; font-family:"Microsoft yahei"; }
 .my_info p{line-height: 50px;height: 50px;margin-bottom: 47px;color: #c2b8cd;}
 #m-about .my_info h3{margin-bottom: 13px;}
 .about_info{padding: 0 10%;}
-.about_info .text{width: 33%;float: left;}
+.about_info .text{width: 23%;float: left;}
 .about_ico{float: left;width:23%;padding:4%;
 	border:6px solid #ffd670; border-radius:50%;margin: 2%;}
 .about_ico a{display: inline-block;width: 100%; padding-top:100%;border-radius: 50%;background: #ffd670;}
 .about_info h3{height: 94px;line-height: 94px;font-size: 18px;color: #fff;}
 .about_info .text p{line-height: 29px;color: #b7b3c3;font-size: 15px;margin-bottom: 10px;}
 .about_info .sns{margin:50px 0 130px 0;}
-.skill{width: 30%;overflow: hidden;float: right;}
+.skill{width:40%;overflow: hidden;float: right;}
 .skill h4{line-height: 24px;font-size: 15px; color: #9c96a9;margin-bottom: 19px;}
 .skill span{display: inline-block;height: 43px; width: 516px;line-height: 43px;color: #b1acbd;
 font-size: 13px;background: #615474;margin-bottom: 14px;text-indent: 20px;position: relative;}
