@@ -113,7 +113,7 @@ transform:rotate(-45deg);
 color: #fff;margin: 10% auto 0;}
 .diamond .con  a span{position: absolute;top: 50%;margin-top: -1%;}
 
-.diamond .con a:hover {
+/*.diamond .con a:hover {
 	background-color: #f8e3ae;
 	
 	background-image: -webkit-gradient(
@@ -132,7 +132,7 @@ color: #fff;margin: 10% auto 0;}
 		rgb(230,192,97) 50%,
 		rgb(241,182,36) 100%
 	);
-}
+}*/
 .project .active{background: #5c5766;}
 #m-contact{padding-top: 50px;}
 .contact_info{width: 600px; margin: 0 auto 60px;}
