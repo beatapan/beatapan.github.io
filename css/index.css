@@ -1,0 +1,158 @@
+/* reset */
+body,h1,h2,h3,h4,h5,p,dl,dd,ul,ol,form,input,textarea,th,td,select { margin:0; padding:0; }
+em { font-style:normal; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:none; vertical-align:top; }
+table { border-collapse:collapse; }
+input,textarea { outline:none; }
+textarea { resize:none; overflow:auto;font-family:"Microsoft yahei"; }
+body { font-size:12px; font-family:"Microsoft yahei"; }
+/* end reset */
+.clear{zoom:1;}
+.clear:after{content: '';display: block;clear: both;}
+
+/*layout*/
+#m-contact,#m-blog{background: #fff;}
+#m-contact .my_info h3,#m-blog .my_info h3{color: #5b6074;margin-bottom: 13px;}
+#m-contact .my_info span,#m-blog .my_info span{background: #dbdde5;}
+#m-contact .my_info p,#m-blog .my_info p{color: #bdc1cf;}
+#m-header, #m-portfolio,#m-about,#m-blog,#m-github,#m-contact,#m-sub-portfolio{width: 100%;padding-top: 50px;
+	overflow: hidden;padding-bottom: 0px;}
+#m-header{background: #5c5766;padding-bottom: 77px;padding-top: 52px;}
+.nav{height: 40px;width: 1280px;margin: 0 auto 128px;}
+#m-header .nav ul li{height: 40px; line-height: 40px;float: left;width: 25%;text-align: center;}
+#m-header .nav ul li a{line-height: 40px;color: #fff;font-size: 15px;} 
+#m-header .nav ul li a:hover{text-decoration: underline;}
+
+.my_info{width: 774px;margin: 0 auto;}
+.photo{margin:0 auto;width:70px; height:70px;padding:12px;
+	border:2px solid #fff; border-radius: 50%;margin-bottom: 46px;}
+.my_info h3{color: #fff; line-height: 40px; font-size: 35px;font-weight: normal;text-align: center;margin-bottom: 34px;}
+.my_info h1{color: #fff; line-height: 64px; font-size: 66px;font-weight: normal;text-align: center;margin-bottom: 24px}
+.my_info p{font-size: 22px;color: #fff;font-weight: normal;text-align: center;margin-bottom: 42px;}
+.my_info p strong{color: #ffd670;}
+.my_info p .age,.my_info p .country{margin-right: 80px;}
+.sns{width: 374px;margin:0 auto;margin-bottom: 160px;}
+.sns a{text-align: center;display: inline-block;width: 42px;height: 42px;border: 3px solid #c4c0cf;
+	border-radius: 50%;line-height: 48px;}
+.sns .sns-2{margin: 0 22px 0 22px;}
+.sns span{display:inline-block;width: 84px; height: 2px; background:#c4c0cf;position: relative;top: -6px;}
+
+
+#m-about{background: #524664;}
+#m-about .photo{border:2px solid #ffd670;margin-bottom: 15px;}
+#m-about .my_info span{display: inline-block;width: 92px; height: 3px; background: #736588;position: relative;left: 341px;}
+.my_info p{line-height: 50px;height: 50px;margin-bottom: 47px;color: #c2b8cd;}
+#m-about .my_info h3{margin-bottom: 13px;}
+.about_info{padding: 0 10%;}
+.about_info .text{width: 33%;float: left;}
+.about_ico{float: left;width:23%;padding:4%;
+	border:6px solid #ffd670; border-radius:50%;margin: 2%;}
+.about_ico a{display: inline-block;width: 100%; padding-top:100%;border-radius: 50%;background: #ffd670;}
+.about_info h3{height: 94px;line-height: 94px;font-size: 18px;color: #fff;}
+.about_info .text p{line-height: 29px;color: #b7b3c3;font-size: 15px;margin-bottom: 10px;}
+.about_info .sns{margin:50px 0 130px 0;}
+.skill{width: 30%;overflow: hidden;float: right;}
+.skill h4{line-height: 24px;font-size: 15px; color: #9c96a9;margin-bottom: 19px;}
+.skill span{display: inline-block;height: 43px; width: 516px;line-height: 43px;color: #b1acbd;
+font-size: 13px;background: #615474;margin-bottom: 14px;text-indent: 20px;position: relative;}
+.skill span a{position:absolute; top:0; left:0;display: inline-block;height: 43px;line-height: 43px;
+color: #fff;background: #ffd670;width: 100%;display: none;}
+.skill span a em{display: block;float: right;}
+
+
+#m-portfolio,#m-sub-portfolio{background: #ffd670;}
+#m-portfolio .my_info span{background: #fff0ca;}
+#m-portfolio .my_info h3{margin-bottom: 13px;}
+#m-portfolio .my_info p{color: #fff0ca;}
+#m-portfolio .con{width: 1280px;margin: 0 auto;padding: 0 5%;}
+#m-portfolio .text{float: left;width: 20%;overflow: hidden;}
+#m-portfolio .text h4{font-size: 16px; line-height: 30px;height: 30px;color: #fff1ce;font-weight: normal;}
+#m-portfolio .text h2{font-size: 23px; line-height: 38px;height: 38px;color: #fff;margin-bottom: 32px;}
+#m-portfolio .text ul{margin-top: 15px;}
+#m-portfolio .text ul li{height: 30px; line-height: 30px;font-size: 15px; color: #ffffff;padding-left: 58px;
+background: url(../img/li_bg.png) no-repeat 36px center; }
+#m-portfolio .text ul li a{color: #fff;}
+#m-portfolio .text p{padding: 11px 0 77px 0; line-height: 30px;color: #fff;font-size: 15px;border-bottom: 1px solid #ffe39c;}
+#m-portfolio .scroll{float: left;}
+#m-portfolio .text ol li{height: 30px; line-height: 30px;font-size: 15px; color: #ffffff;}
+.tags{margin-top: 30px;}
+.scroll{width: 75%; overflow: hidden;position: relative;}
+.scroll ul{height: 684px; width: auto;position: relative;top: 0;left: 0}
+.scroll li{height: 684px; width: 970px;position: absolute;left: 0;top: 0;display: none;}
+.scroll a{display: block;width: 64px;height: 78px;text-align: center;line-height: 78px;
+	font-size: 40px;color: #fff;position: absolute;top: 303px;background: rgba(198,170,109,0.5);}
+.scroll .btn_left{border-radius: 0 6px 6px 0;left: 0;}
+.scroll .btn_right{border-radius: 6px 0 0 6px;right: 0;}
+#m-sub-portfolio{padding-top: 0px;}
+#m-sub-portfolio .nav{margin: 62px auto;}
+#m-sub-portfolio .nav li{height: 40px; line-height: 40px;padding: 0 118px;float: left;font-size: 16px;border: 1px solid #ffd670;}
+#m-sub-portfolio .nav li a{display: inline-block;color: #fff;}
+#m-sub-portfolio .nav li a:hover{text-decoration: none;}
+#m-sub-portfolio .nav li:hover{border: 1px solid #fff;text-decoration: none;border-radius: 2px;}
+
+.project{padding:52px 10% 154px 10%;}
+.diamond{margin-right:4%;float:left;width: 20%;padding-top:20%;background: #fff0ca;border-radius: 6px;position: relative;left: 3.5%;
+transform:rotate(45deg);   
+-ms-transform:rotate(45deg); /* Internet Explorer */   
+-moz-transform:rotate(45deg); /* Firefox */   
+-webkit-transform:rotate(45deg); /* Safari 和 Chrome */   
+-o-transform:rotate(45deg); /* Opera */}
+.diamond:nth-child(4),.diamond:nth-child(7){margin-right: 0;}
+.diamond:nth-child(5){margin-left: 12%;}
+.diamond .con{position:absolute; top:0; left:0;width: 100%;height: 100%;color: #fff;padding: 13%;overflow: hidden;
+transform:rotate(-45deg);   
+-ms-transform:rotate(-45deg); /* Internet Explorer */   
+-moz-transform:rotate(-45deg); /* Firefox */   
+-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */   
+-o-transform:rotate(-45deg); /* Opera */}
+.diamond .con h4{height: 34px;line-height: 34px;text-align: center;margin-top: 10%;}
+.diamond .con  a{display: block;width: 25%; height: 25%;background: #bc492b;
+	font-size: 24px;font-weight: bold;text-align: center;border-radius: 50%;
+color: #fff;margin: 10% auto 0;}
+
+.diamond .con a:hover {
+	background-color: #f8e3ae;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, rgb(255,214,112)),
+		color-stop(0.49, rgb(245,200,87)),
+		color-stop(0.5, rgb(230,192,97)),
+		color-stop(1, rgb(241,182,36))
+	);
+	background-image: -moz-linear-gradient(
+		center top,
+		rgb(255,214,112) 0%,
+		rgb(245,200,87) 49%,
+		rgb(230,192,97) 50%,
+		rgb(241,182,36) 100%
+	);
+}
+.project .active{background: #5c5766;}
+#m-contact{padding-top: 50px;}
+.contact_info{width: 600px; margin: 0 auto 60px;}
+.contact_info li{height: 64px; line-height: 64px;padding-left: 86px;float: left;font-size: 20px;}
+.contact_info li a{color: #a5aabe;}
+.contact_info .email{background: url(../img/email.png) no-repeat;margin-right: 36px;}
+.contact_info .tel{background: url(../img/tel.png) no-repeat;}
+.form{width: 910px;margin: 0 auto;}
+.form input,.form textarea{line-height: 60px;border: none;border-radius: 4px; background: #f3f3f3;color: #d5d5d5;font-size: 16px;text-indent: 26px;}
+.form .name,.form .email{width: 430px;height: 60px;}
+.form .name{margin-right: 40px;}
+.form textarea{color: #d5d5d5;border:none;width: 900px; height: 200px;margin-top: 40px;margin-bottom: 40px;}
+.form .send{width: 274px; height: 66px;background: #ffd670;line-height: 66px;color: #fff;font-size: 18px;
+position: relative;left: 318px;margin-bottom: 70px;}
+
+#m-github{background: #5c5766;padding-bottom: 100px;}
+#m-github .my_info p{color: #eeedee;}
+
+#m-github .my_info a{color: #fff;}
+#m-github .photo{border: 2px solid #ffd670;}
+#m-footer{border-top: 1px solid #f3f3f3;}
+#m-footer span{width: 100%;display:block;line-height: 89px;font-size: 16px;color: #cacaca;width: 434px;margin: 0 auto;}
+#m-footer span a{color: #aaaaaa;}
+
