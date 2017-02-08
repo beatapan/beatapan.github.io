@@ -53,57 +53,96 @@ $(function () {
 
 //section5
 $(function(){
-	var count=0;
-	var timer;
+	var oSlide=$(".c-slide");
+	var oRight = $("#right");
+    var oLeft = $("#left");
+    var oWidth = parseInt(oSlide.css('width')) / 6;
+    // var oHeight=$(".c-slide .img").innerHeight();
+    // console.log(oHeight);
+    var oSpan = $(".btns span");
+    var len = 4;
+    var index = 1;
+    var timer = null;
+    oSlide.css('left',-oWidth);
 
-	function setTimer(){
-		timer=setInterval(function(){
-			count++;
-			$(".c-slide").animate({
-				left: '-'+(count*1920)+'px',},
-				200, function() {
-				if(count===4){
-					$(".c-slide").css('left','0');
-					count=0;
-				}
-			});
+    function animate(offset){                               //过渡效果
+	    var newLeft = parseInt(oSlide.css('left')) + offset;         //点击后的图片偏移量
+	    oSlide.animate({'left':newLeft + 'px'},function(){
+	        if(newLeft > 0){                                 //判断图片是否已经循环一次
+	            oSlide.css('left',-oWidth * len);
+	        }
+	        if(newLeft < -oWidth * 4){
+	            oSlide.css('left',-oWidth);
+	        }
+	    });
+	}
 
-		},1000);
+  	function showBtns(){                //按钮过渡
+        oSpan.each(function(){                  //遍历每个按钮将其Class设置为空
+            $(this).attr('class','');
+        });
+        $(".btns > span").eq(index - 1).addClass('on');          //将当前Span的索引Class设置为on
+    }
 
-	};
-	setTimer();
+ 	function autoplay(){                        //自动播放
+        timer = setTimeout(function(){
+            oRight.trigger('click');
+            autoplay();
+        },3000);
+    }
 
-	$(".section5").mouseover(function(event) {
-		clearInterval(timer);
-	}).mouseout(function(event) {
-		setTimer();
-	});
-
-
-
-	var $index=0;
-             
-    $(".section5 .right").click(function(){
+    oSlide.on('mouseover',function(){            //判断鼠标是否在容器上面
         clearInterval(timer);
-        $index++;
-        if($index>4){
-        $index=0
-        }
-        $('.c-slide').stop().animate({
-        left: '-'+($index*1920)+'px'},200);          
     });
 
+    oSlide.on('mouseout',function(){
+        autoplay();
+    });
 
-   	$(".section5 .left").click(function(){
-        clearInterval(timer);
-        $index--;
-        if($index<0){
-        $index=4
+    oRight.on('click',function(){
+        if(oSlide.is(':animated')){
+            return;
         }
-         $('.c-slide').stop().animate({
-         left: '-'+($index*1920)+'px'},200);
+        if(index == 4){         //向右点击 index索引+1
+            index = 1;
+        }else{
+            index += 1;
+        }
+        animate(-oWidth);
+        showBtns();
+    });
 
-   });
+    oLeft.on('click',function(){
+        if(oSlide.is(':animated')){
+            return;
+        }
+        if(index == 1){         //向左点击 index索引-1
+            index = 4;
+        }else{
+            index -= 1;
+        }
+        animate(oWidth);
+        showBtns();
+    });
+
+    oSpan.each(function(){                  //底部按钮点击切换图片
+	    $(this).on('click',function(){
+	        if(oSlide.is(":animated") || $(this).attr('class') == "on"){
+	            return;
+	        }
+	        var myIndex = $(this).attr('index');
+	        var offset = (myIndex - index) * -oWidth;
+	        index = myIndex;
+	        animate(offset);
+	        showBtns();
+	    })
+	})
+
+	autoplay();
+
+
+
+
 
 
 })
