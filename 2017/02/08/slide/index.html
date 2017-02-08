@@ -84,12 +84,31 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="title: Jquery实现简易的左右轮播date: 2017-02-08 15:07:08tags:新手练习，代码不当之处欢迎指正。[预览请点击我]原理分析：
+
+通过index值得大小变化来判断图片的移动方向。
+通过变化图片的left值，是轮播图动起来。
+
+###Html结构层1234567891011121314151617181920212223242526272829303132333">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Beata's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/02/08/slide/index.html">
 <meta property="og:site_name" content="Beata's Blog">
+<meta property="og:description" content="title: Jquery实现简易的左右轮播date: 2017-02-08 15:07:08tags:新手练习，代码不当之处欢迎指正。[预览请点击我]原理分析：
+
+通过index值得大小变化来判断图片的移动方向。
+通过变化图片的left值，是轮播图动起来。
+
+###Html结构层1234567891011121314151617181920212223242526272829303132333">
+<meta property="og:updated_time" content="2017-02-08T07:12:43.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Beata's Blog">
+<meta name="twitter:description" content="title: Jquery实现简易的左右轮播date: 2017-02-08 15:07:08tags:新手练习，代码不当之处欢迎指正。[预览请点击我]原理分析：
+
+通过index值得大小变化来判断图片的移动方向。
+通过变化图片的left值，是轮播图动起来。
+
+###Html结构层1234567891011121314151617181920212223242526272829303132333">
 
 
 
@@ -117,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/08/slide/"/>
 
 
 
 
 
-  <title> Beata's Blog </title>
+  <title>  | Beata's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,9 +163,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,295 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/slide/scroll/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Beata Pan">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Beata's Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Beata's Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/08/slide/scroll/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T15:07:20+08:00">
-                2017-02-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>slide</title>
-    <style>
-        * {margin:0;padding: 0;}
-        .wrap {position: relative;width: 600px;overflow: hidden; margin:0 auto;}
-        .container {position: relative;width: 3600px;overflow: hidden;left: 0;}
-        .item {float: left;overflow: hidden;cursor: pointer;}
-        .dot {position: absolute;left:240px;bottom: 10px;overflow: hidden;}
-        .dot .cur{background: black;}
-        .dot span {display: block;float: left;width: 16px;height: 16px;margin-left:8px;border-radius: 8px;background: #fff;cursor: pointer;}
-        .left, .right{position: absolute;top: 180px;cursor: pointer; display:none;width: 40px; height: 40px; line-height: 40px;font-size: 40px;}
-        .left{left: 30px; }
-        .right{right: 30px;}
-
-    </style>
-</head>
-<body>
-    <div class="wrap">
-        <div class="container">
-            <div class="item">
-                <img src="1.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="2.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="3.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="4.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="5.jpg" alt="">
-            </div>
-
-            <div class="item">
-                <img src="1.jpg" alt="">
-            </div>
-        </div>
-        <div class="dot">
-            <span class="cur"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        
-        <div class="left"><</div>
-        <div class="right">></div>
-        
-    </div>
-    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            
-            
-            var index=0;
-            var timer;
-            
-
-            function autoPlay(){
-                timer = setInterval(function(){
-                    index ++;
-                    $('.dot span').eq(index%5).addClass('cur').siblings().removeClass('cur');
-                    // 图片轮播动画
-                    $('.container').animate({
-                        left: '-'+(index*600)+'px',},
-                        200, function() {
-                        if (index === 5) {
-                            $('.container').css('left', '0');
-                            index = 0;
-                        }
-                    });
-        
-                },2000);
-                $(".dot span").click(function(event) {
-                    clearInterval(timer);
-
-                $(this).addClass('cur').siblings('').removeClass('cur')
-                });
-            };
-
-            autoPlay();
-
-            $('.dot span').click(function(){
-                var num = $(this).index('.dot span');
-                $('.container').animate({
-                    left: '-'+(num*600)+'px',},
-                    200, function() {
-                    autoPlay();
-                });
-            });
-
-
-                
-
-            $('.item').mouseover(function(event) {
-                clearInterval(timer);
-            }).mouseout(function(event) {
-                autoPlay();
-            });
-
-            
-
-            
-            
-            //划入显示左右箭头
-            $(".wrap").mouseover(function(event) {
-                $(".left").show()
-            }).mouseout(function(event) {
-                $(".left").hide()
-            });
-
-            $(".wrap").mouseover(function(event) {
-                $(".right").show()
-            }).mouseout(function(event) {
-                $(".right").hide()
-            });
-
-
-            //左右按钮轮播
-            
-            
-            $(".right").click(function(){
-            clearInterval(timer);
-            index++;
-            if(index>4){
-              index=0
-            }
-            SLide();
-           
-
-           
-          });
-
-            $(".left").click(function(){
-            clearInterval(timer);
-            index--;
-            if(index<0){
-              index=4
-            }
-            SLide();
-
-
-          });
-
-        function SLide(){
-            $(".dot span").eq(index).addClass("cur").siblings().
-                removeClass("cur");
-            $('.container').stop().animate({
-                left: '-'+(index*600)+'px'},
-                200);
-
-        };
-
-
-
-
-
-
-
-
-        });
-    </script>
-</body>
-</html>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
 
   
 
@@ -549,9 +280,6 @@
             
               
                 
-                <a class="post-title-link" href="/2017/02/08/slide/" itemprop="url">
-                  未命名
-                </a>
               
             
           </h1>
@@ -602,9 +330,7 @@
       
 
       
-        
-          
-            <hr>
+        <hr>
 <p>title: Jquery实现简易的左右轮播<br>date: 2017-02-08 15:07:08<br>tags:<br>新手练习，代码不当之处欢迎指正。<br><a href="/2017/02/08/slide/scroll.html" title="[预览请点击我]">[预览请点击我]</a><br>原理分析：</p>
 <ol>
 <li>通过index值得大小变化来判断图片的移动方向。</li>
@@ -615,16 +341,20 @@
 <p>###CSS样式层<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">* &#123;margin:0;padding: 0;&#125;</div><div class="line">      .wrap &#123;position: relative;width: 600px;overflow: hidden; margin:0 auto;&#125;</div><div class="line">      .container &#123;position: relative;width: 3600px;overflow: hidden;left: 0;&#125;</div><div class="line">      .item &#123;float: left;overflow: hidden;cursor: pointer;&#125;</div><div class="line">      .dot &#123;position: absolute;left:240px;bottom: 10px;overflow: hidden;&#125;</div><div class="line">      .dot .cur&#123;background: black;&#125;</div><div class="line">      .dot span &#123;display: block;float: left;width: 16px;height: 16px;margin-left:8px;border-radius: 8px;background: #fff;cursor: pointer;&#125;</div><div class="line">      .left, .right&#123;position: absolute;top: 180px;cursor: pointer; display:none;width: 40px; height: 40px; line-height: 40px;font-size: 40px;&#125;</div><div class="line">      .left&#123;left: 30px; &#125;</div><div class="line">      .right&#123;right: 30px;&#125;</div></pre></td></tr></table></figure></p>
 <p>###Js行为层<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"> &lt;script src=&quot;http://libs.baidu.com/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line"> &lt;script&gt;</div><div class="line">     jQuery(document).ready(function($) &#123;   </div><div class="line">         var index=0;</div><div class="line">         var timer;</div><div class="line">         // 图片自动轮播动画函数</div><div class="line">         function autoPlay()&#123;</div><div class="line">             //开启定时器</div><div class="line">             timer = setInterval(function()&#123;</div><div class="line">                 index ++;</div><div class="line">                 //用取模的原理遍历dot下的小点为其添加当前样式</div><div class="line">                 $(&apos;.dot span&apos;).eq(index%5).addClass(&apos;cur&apos;).siblings().removeClass(&apos;cur&apos;);</div><div class="line">                 //当图片轮播至最后一张时，修改index为0，将整个轮播拉回第一张图的初始状态，移动一张图片的left值等于一张图片的宽度</div><div class="line">                 $(&apos;.container&apos;).animate(&#123;</div><div class="line">                     left: &apos;-&apos;+(index*600)+&apos;px&apos;,&#125;,</div><div class="line">                     200, function() &#123;</div><div class="line">                     if (index === 5) &#123;</div><div class="line">                         $(&apos;.container&apos;).css(&apos;left&apos;, &apos;0&apos;);</div><div class="line">                         index = 0;</div><div class="line">                     &#125;</div><div class="line">                 &#125;);</div><div class="line">     </div><div class="line">             &#125;,2000);</div><div class="line">             //鼠标移动至dot时，关闭定时器，使轮播静止</div><div class="line">             $(&quot;.dot span&quot;).click(function(event) &#123;</div><div class="line">                 clearInterval(timer);</div><div class="line">                 //当前dot高亮</div><div class="line">                 $(this).addClass(&apos;cur&apos;).siblings(&apos;&apos;).removeClass(&apos;cur&apos;)</div><div class="line">             &#125;);</div><div class="line">         &#125;;</div><div class="line"></div><div class="line">         autoPlay();//轮播动起来</div><div class="line">//点击对应dot显示对应的图片</div><div class="line">         $(&apos;.dot span&apos;).click(function()&#123;</div><div class="line">             var num = $(this).index(&apos;.dot span&apos;);</div><div class="line">             $(&apos;.container&apos;).animate(&#123;</div><div class="line">                 left: &apos;-&apos;+(num*600)+&apos;px&apos;,&#125;,</div><div class="line">                 200, function() &#123;</div><div class="line">                 autoPlay();</div><div class="line">             &#125;);</div><div class="line">         &#125;);</div><div class="line">         //鼠标移入轮播关闭定时器</div><div class="line">         $(&apos;.item&apos;).mouseover(function(event) &#123;</div><div class="line">             clearInterval(timer);</div><div class="line">         &#125;).mouseout(function(event) &#123;</div><div class="line">             autoPlay();</div><div class="line">             </div><div class="line">         //划入显示左右箭头</div><div class="line">         $(&quot;.wrap&quot;).mouseover(function(event) &#123;</div><div class="line">                 $(&quot;.left&quot;).show()</div><div class="line">             &#125;).mouseout(function(event) &#123;</div><div class="line">                 $(&quot;.left&quot;).hide()</div><div class="line">             &#125;);</div><div class="line"></div><div class="line">         $(&quot;.wrap&quot;).mouseover(function(event) &#123;</div><div class="line">                 $(&quot;.right&quot;).show()</div><div class="line">             &#125;).mouseout(function(event) &#123;</div><div class="line">                 $(&quot;.right&quot;).hide()</div><div class="line">             &#125;);</div><div class="line"></div><div class="line"></div><div class="line">         //左右按钮切换轮播图，需要判断index值得大小  </div><div class="line">         $(&quot;.right&quot;).click(function()&#123;</div><div class="line">             clearInterval(timer);</div><div class="line">             index++;</div><div class="line">             if(index&gt;4)&#123;</div><div class="line">               index=0</div><div class="line">             &#125;</div><div class="line">             SLide();   </div><div class="line">         &#125;);</div><div class="line"></div><div class="line">         $(&quot;.left&quot;).click(function()&#123;</div><div class="line">             clearInterval(timer);</div><div class="line">             index--;</div><div class="line">             if(index&lt;0)&#123;</div><div class="line">               index=4</div><div class="line">             &#125;</div><div class="line">             SLide();</div><div class="line">         &#125;);</div><div class="line"></div><div class="line">         function SLide()&#123;</div><div class="line">             $(&quot;.dot span&quot;).eq(index).addClass(&quot;cur&quot;).siblings().</div><div class="line">                 removeClass(&quot;cur&quot;);</div><div class="line">             $(&apos;.container&apos;).stop().animate(&#123;</div><div class="line">                 left: &apos;-&apos;+(index*600)+&apos;px&apos;&#125;,</div><div class="line">                 200);</div><div class="line"></div><div class="line">         &#125;;</div><div class="line">     &#125;);</div><div class="line"> &lt;/script&gt;</div></pre></td></tr></table></figure></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -633,143 +363,38 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/07/blog/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Beata Pan">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Beata's Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Beata's Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/02/07/blog/" rel="next" title="如何利用github建立自己的个人网站及博客">
+                <i class="fa fa-chevron-left"></i> 如何利用github建立自己的个人网站及博客
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/02/07/blog/" itemprop="url">
-                  如何利用github建立自己的个人网站及博客
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+              <a href="/2017/02/08/slide/scroll/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-07T11:24:11+08:00">
-                2017-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>（此心得只针对有前端基础的同学）</p>
-<h3 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h3><p>首先github是需要翻墙的，随便找个vpn就能连打开github官网（<a href="https://github.com/），然后注册一个账号。">https://github.com/），然后注册一个账号。</a><br>有了github之后我们就能建立自己的个人网站以及博客了，我这里所说的个人网站和博客是一体的。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/07/blog/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -777,6 +402,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -938,6 +567,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -969,6 +602,10 @@
 
   
 
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
   
 
 
