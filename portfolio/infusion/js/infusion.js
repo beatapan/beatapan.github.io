@@ -150,6 +150,9 @@ $(function(){
 
     $(function () {
         var index=0;
+         $('.section6 .gallery').eq(0).show('slow').siblings('.section6 .gallery').hide();
+  
+
         $(".section6 li a").mouseover(function() {
             index = $(this).index('.section6 li a');
             $('.section6 .gallery').eq(index).fadeIn('slow').siblings('.section6 .gallery').fadeOut('slow');
@@ -166,7 +169,10 @@ $(function(){
     	var margin=10;//这里设置间距
     	var li=$(".gallery li");//这里是区块名称
     	var	li_W = li[0].offsetWidth+margin;//取区块的实际宽度（包含间距，这里使用源生的offsetWidth函数，不适用jQuery的width()函数是因为它不能取得实际宽度，例如元素内有pandding就不行了）
-    	function pan(){
+
+    	
+
+    	function flow(){
     		var h=[];//记录区块高度的数组
     		var n = $(".gallery").height()/li_W|0;//模块的宽度除以区块宽度就是一行能放几个区块
 			for(var i = 0;i < 6;i++) {//有多少个li就循环多少次
@@ -189,7 +195,10 @@ $(function(){
     	/* 使用for in运算返回数组中某一值的对应项数(比如算出最小的高度值是数组里面的第几个) */
 		function getarraykey(s, v) {for(k in s) {if(s[k] == v) {return k;}}}
 		/*这里一定要用onload，因为图片不加载完就不知道高度值*/
-		window.onload = function() {pan();};
+		window.onload=function(){
+			flow();
+		}
+
 
     });
             

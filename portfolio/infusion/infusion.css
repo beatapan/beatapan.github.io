@@ -98,12 +98,12 @@ a {text-decoration:none;}
 .section6 .nav ul{margin-top: 90px;}
 .section6 .nav li{line-height: 52px; font-size: 1.4rem;}
 .section6 .nav li a{color: #444e52;}
-.section6 .gallery{float: left;width: 68%;height: 854px;position: absolute;top: 0;left: 32%; }
-.gallery-1{background: #80aba9;}
-.gallery-2{background: #00a497;}
-.gallery-3{background: #38b48b;}
-.gallery-4{background: #00a381;}
-.gallery-5{background: #006e54;}
+.section6 .gallery{float: left;width: 68%;height: 854px;position: absolute;top: 0;left: 32%;}
+.gallery-1{background: #80aba9;display: block;}
+.gallery-2{background: #00a497;display: none;}
+.gallery-3{background: #38b48b;display: none;}
+.gallery-4{background: #00a381;display: none;}
+.gallery-5{background: #006e54;display: none;}
 
 
 .img-box{position: relative;height: 854px;}
