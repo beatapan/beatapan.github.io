@@ -10,7 +10,7 @@
 </head>
 <body>
  <div>
- 	<div id="m-header">
+ 	<section class="g-sec" id="m-header">
  		<div class="nav">
 			<ul class="clear">
 				<li><a href="#m-about">ABOUT/关于</a></li>
@@ -25,7 +25,7 @@
 			</div>
 			<h3>HELLO</h3>
 			<h1>My name is Beata,</h1>
-			<p>ı'm a  Front End Engineer born in China.</p>
+			<p>I'm a Front End Engineer born in China.</p>
 			<div class="sns">
 				<span></span>
 				<a href="https://github.com/beatapan" target="_blank"><img src="images/index-img/sns1.png" alt=""></a>
@@ -39,8 +39,8 @@
 				Working at: <strong>Zhejiang Xiaoye</strong>
 			</p>
 		</div>
-	</div>
-	<div id="m-about">
+	</section>
+	<section class="g-sec" id="m-about">
 		<div class="my_info">
 			<div class="photo">
 				<img src="images/index-img/about_photo.png" alt="">
@@ -69,35 +69,34 @@
 				<h3>MY SKILLS/技能</h3>
 				<div class="code">
 					<h4>Coding Programs</h4>
-					<span>
-						HTML / HTML5
-						<a href="">HTML / HTML5<em>80%</em></a>
+					<span data-percent="80">
+						<a>HTML / HTML5<em></em></a>
 					</span>
-					<span>css/ css3 
-						<a href="">css/ css3 <em>72%</em></a>
+					<span data-percent="72">
+						<a>CSS/ CSS3<em></em></a>
 					</span>
-					<span>JAVASCRIPT / JQUERY 
-						<a href="">JAVASCRIPT / JQUERY<em>42%</em></a>
+					<span data-percent="42">
+						<a>JAVASCRIPT / JQUERY<em></em></a>
 					</span>
 				</div>
 				<div class="design">
 					<h4>Design Programs</h4>
-					<span>ADOBE PHOTOPHOP
-						<a href="">ADOBE PHOTOPHOP<em>80%</em></a>
+					<span data-percent="80">
+						<a>ADOBE PHOTOPHOP<em></em></a>
 					</span>
-					<span>DREAMWEAVER
-						<a href="">DREAMWEAVER<em>72%</em></a>
+					<span data-percent="72">
+						<a>DREAMWEAVER<em></em></a>
 					</span>
-					<span>ADOBE FIREWORKS
-						<a href="">ADOBE FIREWORKS<em>45%</em></a>
+					<span data-percent="45">
+						<a>ADOBE FIREWORKS<em></em></a>
 					</span>
 				</div>
 				
 			</div>
 
 		</div>
-	</div>
-	<div id="m-portfolio" class="clear">
+	</section>
+	<section class="g-sec" id="m-portfolio" class="clear">
 		<div class="g-wrap">
 			<div class="my_info">
 				<h3>PORTFOLIO</h3>
@@ -117,8 +116,8 @@
 					</ul>
 					<h4>网址链接</h4>
 					<ul>
-						<li><a href="portfolio/infusion/infusion.html" target="_blank">点我查看：响应式web网站Infusion</a></li>
-						<li><a href="portfolio/100du/index.html" target="_blank">点我查看：电子商务网站100du</a></li>
+						<li><a href="portfolio/infusion/infusion.html" target="_blank" title="点我查看：响应式web网站Infusion">点我查看：响应式web网站Infusion</a></li>
+						<li><a href="portfolio/100du/index.html" target="_blank" title="点我查看：电子商务网站100du">点我查看：电子商务网站100du</a></li>
 					</ul>
 					<h4 class="tags">标签</h4>
 					<ol>
@@ -136,12 +135,12 @@
 			</div>
 		</div>
 
-	</div>
-	<div id="m-sub-portfolio" class="clear">
+	</section>
+	<section class="g-sec" id="m-sub-portfolio" class="clear">
 		<div class="nav">
 				<ul class="clear">
-					<li ><a href="#">ALL/学习书籍</a></li>
-					<li ><a href="#">Css/Css3</a></li>
+					<li><a href="#">ALL/学习书籍</a></li>
+					<li><a href="#">Css/Css3</a></li>
 					<li><a href="#">Javascript</a></li>
 					<li><a href="#">Jquery</a></li>
 				</ul>
@@ -190,7 +189,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 <!-- 	<div id="blog">
 		<div class="wrap">
 			<div class="my_info">
@@ -200,32 +199,34 @@
 			</div>
 		</div>
 	</div> -->
-	<div id="m-github">
-		<div class="my_info">
-			<div class="photo">
-				<img src="images/index-img/github.png" alt="">
+	<section class="g-sec">
+		<div id="m-github">
+			<div class="my_info">
+				<div class="photo">
+					<img src="images/index-img/github.png" alt="">
+				</div>
+				<p>“Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.”- Mosher’s Law of Software Engineering</p>
+				<p><a href="https://github.com/beatapan" target="_blank">@beatapan</a></p>
 			</div>
-			<p>“Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.”- Mosher’s Law of Software Engineering</p>
-			<p><a href="https://github.com/beatapan" target="_blank">@beatapan</a></p>
 		</div>
-	</div>
-	<div id="m-contact">
-		<div class="my_info">
-			<h3>CONTACT</h3>
-			<span></span>
-			<p>快把我收入碗里吧！</p>
+		<div id="m-contact">
+			<div class="my_info">
+				<h3>CONTACT</h3>
+				<span></span>
+				<p>快把我收入碗里吧！</p>
+			</div>
+			<div class="contact_info clear">
+				<ul class="clear">
+					<li class="email"><a href="mailto:panlifanglove1@163.com">panlifanglove1@163.com</a></li>
+					<li class="tel"><a href="">18768121407</a></li>
+				</ul>
+			</div>
+			
 		</div>
-		<div class="contact_info clear">
-			<ul class="clear">
-				<li class="email"><a href="mailto:panlifanglove1@163.com">panlifanglove1@163.com</a></li>
-				<li class="tel"><a href="">18768121407</a></li>
-			</ul>
-		</div>
-		
-	</div>
-	<div id="m-footer">
+		<div id="m-footer">
 			<span>© 2017 All Rights Reserved, made by <a href>Lifang Pan</a></span>
-	</div>
+		</div>
+	</section>
  </div>
 </body>
 </html>
