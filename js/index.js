@@ -1,17 +1,21 @@
 $(function(){
-	
+	var flag = false;
+	$('#m-header').height($(window).height());
+
 	//技能显示区
-	(function(){
-		$(".skill span").mouseover(function(){
-
-			$(".skill span a").hide();
-
-			var oWidth=$(this).find('em').html();
-			$(this).find('a').css('width', oWidth);
-			$(this).find('a').show();
-			
-		});
-	})();
+	$(window).scroll(function(event) {
+		if (!flag) {
+			var stp = $(window).scrollTop();
+			if (stp > 850) {
+				flag = true;
+				$(".skill span").each(function(index, el) {
+					var oWidth = $(el).data('percent') + '%';
+					$(el).find('a').find('em').html(oWidth);
+					$(el).find('a').animate({width: oWidth}, 1000);
+				});
+			}
+		}
+	});
 
 	//菱形显示区
 	(function(){
