@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>slide</title>
+    <style>
+        * {margin:0;padding: 0;}
+        .wrap {position: relative;width: 600px;overflow: hidden; margin:0 auto;}
+        .container {position: relative;width: 3600px;overflow: hidden;left: 0;}
+        .item {float: left;overflow: hidden;cursor: pointer;}
+        .dot {position: absolute;left:240px;bottom: 10px;overflow: hidden;}
+        .dot .cur{background: black;}
+        .dot span {display: block;float: left;width: 16px;height: 16px;margin-left:8px;border-radius: 8px;background: #fff;cursor: pointer;}
+        .left, .right{position: absolute;top: 180px;cursor: pointer; display:none;width: 40px; height: 40px; line-height: 40px;font-size: 40px;}
+        .left{left: 30px; }
+        .right{right: 30px;}
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">
+                <img src="1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="5.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <img src="1.jpg" alt="">
+            </div>
+        </div>
+        <div class="dot">
+            <span class="cur"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="left"><</div>
+        <div class="right">></div>
+        
+    </div>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {   
+            var index=0;
+            var timer;
+            
+            function autoPlay(){
+                timer = setInterval(function(){
+                    index ++;
+                    $('.dot span').eq(index%5).addClass('cur').siblings().removeClass('cur');
+                    // 图片轮播动画
+                    $('.container').animate({
+                        left: '-'+(index*600)+'px',},
+                        200, function() {
+                        if (index === 5) {
+                            $('.container').css('left', '0');
+                            index = 0;
+                        }
+                    });
+        
+                },2000);
+                $(".dot span").click(function(event) {
+                    clearInterval(timer);
+
+                $(this).addClass('cur').siblings('').removeClass('cur')
+                });
+            };
+
+            autoPlay();
+
+            $('.dot span').click(function(){
+                var num = $(this).index('.dot span');
+                $('.container').animate({
+                    left: '-'+(num*600)+'px',},
+                    200, function() {
+                    autoPlay();
+                });
+            });
+
+
+                
+
+            $('.item').mouseover(function(event) {
+                clearInterval(timer);
+            }).mouseout(function(event) {
+                autoPlay();
+            });
+
+            
+
+            
+            
+            //划入显示左右箭头
+            $(".wrap").mouseover(function(event) {
+                    $(".left").show()
+                }).mouseout(function(event) {
+                    $(".left").hide()
+                });
+
+            $(".wrap").mouseover(function(event) {
+                    $(".right").show()
+                }).mouseout(function(event) {
+                    $(".right").hide()
+                });
+
+
+            //左右按钮轮播
+            
+            
+            $(".right").click(function(){
+                clearInterval(timer);
+                index++;
+                if(index>4){
+                  index=0
+                }
+                SLide();   
+            });
+
+            $(".left").click(function(){
+                clearInterval(timer);
+                index--;
+                if(index<0){
+                  index=4
+                }
+                SLide();
+            });
+
+            function SLide(){
+                $(".dot span").eq(index).addClass("cur").siblings().
+                    removeClass("cur");
+                $('.container').stop().animate({
+                    left: '-'+(index*600)+'px'},
+                    200);
+
+            };
+        });
+    </script>
+</body>
+</html>
