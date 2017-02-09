@@ -20,9 +20,30 @@ $(function(){
 	//菱形显示区
 	(function(){
 		$('.diamond').mouseover(function(){
-			$(this).find('a').addClass('animated shake')
+			$(this).addClass('animated rFlip');
 		});
+		$('#book li').click(function(event) {
+			var type = $(this).data('book');
+			$(this).addClass('current').siblings('li').removeClass('current');
+			$('.diamond').removeClass('animated rFlip nFlip');
+			if (type === 'all') {
+				setTimeout(function() {
+					$('.diamond').addClass('animated rFlip');
+				}, 0);
 
+			} else {
+				$('.diamond').each(function(index, el) {
+					setTimeout(function() {
+						if (el.className.indexOf('j-' + type) !== -1) {
+							$(el).addClass('animated rFlip');
+						} else {
+							$(el).addClass('animated nFlip');
+						}
+					}, 0);
+
+				});
+			}
+		});
 	})();
 
 	//左右轮播切换
