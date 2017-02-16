@@ -1,6 +1,6 @@
 $(function(){
 	var flag = false;
-	$('#m-header').height($(window).height());
+	// $('#m-header').height($(window).height());
 
 	//技能显示区
 	$(window).scroll(function(event) {
