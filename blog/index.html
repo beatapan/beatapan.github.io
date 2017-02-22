@@ -238,6 +238,133 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/22/question/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Beata Pan">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Beata's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Beata's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/22/question/" itemprop="url">
+                  break,continue,return的区别
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-22T19:14:45+08:00">
+                2017-02-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>break语句会使运行的程序立刻退出包含在最内层的循环或者退出一个switch语句。</p>
+<p>由于它是用来退出循环或者switch语句，所以只有当它出现在这些语句时，这种形式的break语句才是合法的。</p>
+<p>如果一个循环的终止条件非常复杂，那么使用break语句来实现某些条件比用一个循环表达式来表达所有的条件容易得多。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var i=1;i&lt;10;i++)&#123;</div><div class="line">	if(i==6)</div><div class="line">	break;</div><div class="line">	alert(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上述代码当i的值为6的时候，for循环终止，所以不再执行alert(i)语句。<br>//弹出结果：12345</p>
+<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>continue语句和break语句相似。所不同的是，它不是退出一个循环，而是开始循环的一次新迭代。</p>
+<p>continue语句只能用在while语句、do/while语句、for语句、或者for/in语句的循环体内，在其它地方使用都会引起错误！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var i=1;i&lt;10;i++)&#123;</div><div class="line">	if(i==6)</div><div class="line">    continue;</div><div class="line">	alert(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>当i=6的时候，直接跳出本次for循环。下次继续执行。<br>//弹出结果：12345789</p>
+<h2 id="break-1"><a href="#break-1" class="headerlink" title="break"></a>break</h2><p>return语句就是用于指定函数返回的值。<br>当执行return语句时，即使函数主体中还有其他语句，函数执行也会停止。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/12/test/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -264,7 +391,7 @@
               
                 
                 <a class="post-title-link" href="/2017/02/12/test/" itemprop="url">
-                  test
+                  记前端面试中遇到的一些问题
                 </a>
               
             
@@ -318,7 +445,26 @@
       
         
           
-            <p>测试mac下能否顺利发布博客</p>
+            <h2 id="css问题"><a href="#css问题" class="headerlink" title="css问题"></a>css问题</h2><h3 id="position定位"><a href="#position定位" class="headerlink" title="position定位"></a>position定位</h3><p>position有四种定位方式:absolute,relative,static,fixed。<br>子元素用绝对定位时，只要父元素有定位，就可以。<br>用position实现垂直居中的几种方式：</p>
+<p>方法1：table-cell<br>html结构：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;box box1&quot;&gt;</div><div class="line">        &lt;span&gt;垂直居中&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box1&#123;</div><div class="line">    display: table-cell;</div><div class="line">    vertical-align: middle;</div><div class="line">    text-align: center;        </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>方法2：display:flex<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box2&#123;</div><div class="line">    display: flex;</div><div class="line">    justify-content:center;</div><div class="line">    align-items:Center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>方法3：绝对定位和负边距<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.box3&#123;position:relative;&#125;</div><div class="line">.box3 span&#123;</div><div class="line">            position: absolute;</div><div class="line">            width:100px;</div><div class="line">            height: 50px;</div><div class="line">            top:50%;</div><div class="line">            left:50%;</div><div class="line">            margin-left:-50px;</div><div class="line">            margin-top:-25px;</div><div class="line">            text-align: center;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p>方法4：translate<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.box6 span&#123;</div><div class="line">            position: absolute;</div><div class="line">            top:50%;</div><div class="line">            left:50%;</div><div class="line">            width:100%;</div><div class="line">            transform:translate(-50%,-50%);</div><div class="line">            text-align: center;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="box盒模型"><a href="#box盒模型" class="headerlink" title="box盒模型"></a>box盒模型</h3><p>内容(content)、填充(padding)、边框(border)、边界(margin)<br>css3 box-sizing属性<br>box-sizing属性可以为三个值之一：content-box（default），border-box，padding-box。</p>
+<p>content-box，border和padding不计算入width之内</p>
+<p>padding-box，padding计算入width内</p>
+<p>border-box，border和padding计算入width之内，其实就是怪异模式了~</p>
+<h2 id="html5相关"><a href="#html5相关" class="headerlink" title="html5相关"></a>html5相关</h2><h3 id="b和strong，i和em的区别"><a href="#b和strong，i和em的区别" class="headerlink" title="b和strong，i和em的区别"></a>b和strong，i和em的区别</h3><p>在没有被 CSS 定义的情况下，b 和 strong 在同一浏览器内的显示效果相同 — 该要素内的文字变粗了。在语义表达上，strong 表示的强度比 em 更强。另外，b 要素是视觉要素（presentationl elements）；em 和 strong 是表达要素(phrase elements)。</p>
+<h2 id="Javascript相关"><a href="#Javascript相关" class="headerlink" title="Javascript相关"></a>Javascript相关</h2><h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><p>参考<a href="http://www.cnblogs.com/liugang-vip/p/5616484.html" target="_blank" rel="external">http://www.cnblogs.com/liugang-vip/p/5616484.html</a></p>
+<h2 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h2><p>1、HTML 的 head 部分中加入如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>其中<br> width：viewport 的宽度，可以指定为一个像素值，如：640，或者为特殊的值，如：device-width （设备的宽度）。</p>
+<p>maximum-scale：允许浏览者缩放到的最大比例，一般设为1.0，即原始尺寸。</p>
+<p>minimum-scale：允许浏览者缩放到的最小比例，一般设为1.0，即原始尺寸。</p>
+<p>user-scalable：浏览者是否可以手动缩放，yes 或 no 。</p>
+<p> initial-scale：初始缩放比例，即当浏览器第一次加载页面时的缩放比例。值为 1.0 即原始尺寸。</p>
+<p>2、HTML 中引入 一段自动适配所有窗口的 js 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(function(doc, win)&#123;</div><div class="line">    var docE1 = doc.documentElement,</div><div class="line">        resizeEvt = &apos;orientationchange&apos; in window ? &apos;orientationchange&apos; : &apos;resize&apos;,</div><div class="line">        recalc = function()&#123;</div><div class="line">            var clientWidth = docE1.clientWidth;</div><div class="line">            if(!clientWidth) return;</div><div class="line">            docE1.style.fontSize = 20 * (clientWidth / 320) + &apos;px&apos;;            </div><div class="line">        &#125;;</div><div class="line"></div><div class="line">    if (!doc.addEventListener) return;</div><div class="line">    win.addEventListener(resizeEvt,recalc,false);</div><div class="line">    doc.addEventListener(&apos;DOMContentLoaded&apos;,recalc,false);</div><div class="line">&#125;)(document,window);</div></pre></td></tr></table></figure></p>
+<p>3、rem和em<br>em相对于父级，rem相对于html或者body的字体尺寸<br> rem 的插件<br> cssrem（下载使用网址<a href="https://github.com/flashlizi/cssrem）" target="_blank" rel="external">https://github.com/flashlizi/cssrem）</a></p>
 
           
         
@@ -771,7 +917,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="测试mac下能否顺利发布博客">
+<meta name="description" content="css问题position定位position有四种定位方式:absolute,relative,static,fixed。子元素用绝对定位时，只要父元素有定位，就可以。用position实现垂直居中的几种方式：
+方法1：table-cellhtml结构：123&amp;lt;div class=&amp;quot;box box1&amp;quot;&amp;gt;        &amp;lt;span&amp;gt;垂直居中&amp;lt;/sp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
+<meta property="og:title" content="记前端面试中遇到的一些问题">
 <meta property="og:url" content="http://yoursite.com/2017/02/12/test/index.html">
 <meta property="og:site_name" content="Beata's Blog">
-<meta property="og:description" content="测试mac下能否顺利发布博客">
-<meta property="og:updated_time" content="2017-02-12T03:20:32.000Z">
+<meta property="og:description" content="css问题position定位position有四种定位方式:absolute,relative,static,fixed。子元素用绝对定位时，只要父元素有定位，就可以。用position实现垂直居中的几种方式：
+方法1：table-cellhtml结构：123&amp;lt;div class=&amp;quot;box box1&amp;quot;&amp;gt;        &amp;lt;span&amp;gt;垂直居中&amp;lt;/sp">
+<meta property="og:updated_time" content="2017-02-22T11:13:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="测试mac下能否顺利发布博客">
+<meta name="twitter:title" content="记前端面试中遇到的一些问题">
+<meta name="twitter:description" content="css问题position定位position有四种定位方式:absolute,relative,static,fixed。子元素用绝对定位时，只要父元素有定位，就可以。用position实现垂直居中的几种方式：
+方法1：table-cellhtml结构：123&amp;lt;div class=&amp;quot;box box1&amp;quot;&amp;gt;        &amp;lt;span&amp;gt;垂直居中&amp;lt;/sp">
 
 
 
@@ -127,7 +130,7 @@
 
 
 
-  <title> test | Beata's Blog </title>
+  <title> 记前端面试中遇到的一些问题 | Beata's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -264,7 +267,7 @@
             
             
               
-                test
+                记前端面试中遇到的一些问题
               
             
           </h1>
@@ -315,7 +318,26 @@
       
 
       
-        <p>测试mac下能否顺利发布博客</p>
+        <h2 id="css问题"><a href="#css问题" class="headerlink" title="css问题"></a>css问题</h2><h3 id="position定位"><a href="#position定位" class="headerlink" title="position定位"></a>position定位</h3><p>position有四种定位方式:absolute,relative,static,fixed。<br>子元素用绝对定位时，只要父元素有定位，就可以。<br>用position实现垂直居中的几种方式：</p>
+<p>方法1：table-cell<br>html结构：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;box box1&quot;&gt;</div><div class="line">        &lt;span&gt;垂直居中&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box1&#123;</div><div class="line">    display: table-cell;</div><div class="line">    vertical-align: middle;</div><div class="line">    text-align: center;        </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>方法2：display:flex<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box2&#123;</div><div class="line">    display: flex;</div><div class="line">    justify-content:center;</div><div class="line">    align-items:Center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>方法3：绝对定位和负边距<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.box3&#123;position:relative;&#125;</div><div class="line">.box3 span&#123;</div><div class="line">            position: absolute;</div><div class="line">            width:100px;</div><div class="line">            height: 50px;</div><div class="line">            top:50%;</div><div class="line">            left:50%;</div><div class="line">            margin-left:-50px;</div><div class="line">            margin-top:-25px;</div><div class="line">            text-align: center;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p>方法4：translate<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.box6 span&#123;</div><div class="line">            position: absolute;</div><div class="line">            top:50%;</div><div class="line">            left:50%;</div><div class="line">            width:100%;</div><div class="line">            transform:translate(-50%,-50%);</div><div class="line">            text-align: center;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="box盒模型"><a href="#box盒模型" class="headerlink" title="box盒模型"></a>box盒模型</h3><p>内容(content)、填充(padding)、边框(border)、边界(margin)<br>css3 box-sizing属性<br>box-sizing属性可以为三个值之一：content-box（default），border-box，padding-box。</p>
+<p>content-box，border和padding不计算入width之内</p>
+<p>padding-box，padding计算入width内</p>
+<p>border-box，border和padding计算入width之内，其实就是怪异模式了~</p>
+<h2 id="html5相关"><a href="#html5相关" class="headerlink" title="html5相关"></a>html5相关</h2><h3 id="b和strong，i和em的区别"><a href="#b和strong，i和em的区别" class="headerlink" title="b和strong，i和em的区别"></a>b和strong，i和em的区别</h3><p>在没有被 CSS 定义的情况下，b 和 strong 在同一浏览器内的显示效果相同 — 该要素内的文字变粗了。在语义表达上，strong 表示的强度比 em 更强。另外，b 要素是视觉要素（presentationl elements）；em 和 strong 是表达要素(phrase elements)。</p>
+<h2 id="Javascript相关"><a href="#Javascript相关" class="headerlink" title="Javascript相关"></a>Javascript相关</h2><h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><p>参考<a href="http://www.cnblogs.com/liugang-vip/p/5616484.html" target="_blank" rel="external">http://www.cnblogs.com/liugang-vip/p/5616484.html</a></p>
+<h2 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h2><p>1、HTML 的 head 部分中加入如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>其中<br> width：viewport 的宽度，可以指定为一个像素值，如：640，或者为特殊的值，如：device-width （设备的宽度）。</p>
+<p>maximum-scale：允许浏览者缩放到的最大比例，一般设为1.0，即原始尺寸。</p>
+<p>minimum-scale：允许浏览者缩放到的最小比例，一般设为1.0，即原始尺寸。</p>
+<p>user-scalable：浏览者是否可以手动缩放，yes 或 no 。</p>
+<p> initial-scale：初始缩放比例，即当浏览器第一次加载页面时的缩放比例。值为 1.0 即原始尺寸。</p>
+<p>2、HTML 中引入 一段自动适配所有窗口的 js 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(function(doc, win)&#123;</div><div class="line">    var docE1 = doc.documentElement,</div><div class="line">        resizeEvt = &apos;orientationchange&apos; in window ? &apos;orientationchange&apos; : &apos;resize&apos;,</div><div class="line">        recalc = function()&#123;</div><div class="line">            var clientWidth = docE1.clientWidth;</div><div class="line">            if(!clientWidth) return;</div><div class="line">            docE1.style.fontSize = 20 * (clientWidth / 320) + &apos;px&apos;;            </div><div class="line">        &#125;;</div><div class="line"></div><div class="line">    if (!doc.addEventListener) return;</div><div class="line">    win.addEventListener(resizeEvt,recalc,false);</div><div class="line">    doc.addEventListener(&apos;DOMContentLoaded&apos;,recalc,false);</div><div class="line">&#125;)(document,window);</div></pre></td></tr></table></figure></p>
+<p>3、rem和em<br>em相对于父级，rem相对于html或者body的字体尺寸<br> rem 的插件<br> cssrem（下载使用网址<a href="https://github.com/flashlizi/cssrem）" target="_blank" rel="external">https://github.com/flashlizi/cssrem）</a></p>
 
       
     </div>
@@ -351,6 +373,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/22/question/" rel="prev" title="break,continue,return的区别">
+                break,continue,return的区别 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -397,8 +423,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -411,7 +446,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -440,6 +475,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#css问题"><span class="nav-number">1.</span> <span class="nav-text">css问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#position定位"><span class="nav-number">1.1.</span> <span class="nav-text">position定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#box盒模型"><span class="nav-number">1.2.</span> <span class="nav-text">box盒模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html5相关"><span class="nav-number">2.</span> <span class="nav-text">html5相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#b和strong，i和em的区别"><span class="nav-number">2.1.</span> <span class="nav-text">b和strong，i和em的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript相关"><span class="nav-number">3.</span> <span class="nav-text">Javascript相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件冒泡"><span class="nav-number">3.1.</span> <span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件委托"><span class="nav-number">3.2.</span> <span class="nav-text">事件委托</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端适配"><span class="nav-number">4.</span> <span class="nav-text">移动端适配</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
